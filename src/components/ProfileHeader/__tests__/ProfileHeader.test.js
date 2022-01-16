@@ -5,12 +5,12 @@ import ProfileHeader from '../ProfileHeader'
 // This 
 afterEach(cleanup);
 
-test('ProfileHeader displays name', () => {
+it('ProfileHeader displays name', () => {
     
     // Render function returns useful functions to manipulate the component
-    const {queryByLabelText,getByLabelText} = render(
-       <ProfileHeader name="testname"></ProfileHeader>
-   )
+    const {queryAllByLabelText,getByLabelText} = render(
+       <ProfileHeader name="testname"/>,
+   );
 
-   expect(queryByLabelText(/testname/i)).toBeTruthy();
+   expect(queryAllByLabelText("testname")).toBeTruthy();
 })
