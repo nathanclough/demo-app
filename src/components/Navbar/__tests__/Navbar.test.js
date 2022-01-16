@@ -12,3 +12,23 @@ test('Navbar has links for home and profile', () => {
     expect( queryByText(/Home/i)).toBeTruthy();
     expect( queryByText(/Profile/i)).toBeTruthy();
 })
+
+
+const mockedUsedNavigate = jest.fn();
+jest.mock('react-router-dom',()=> ({
+    ...jest.requireActual('react-router-dom'),
+    useNavigate: () => mockedUsedNavigate,
+}))
+
+beforeEach(() => {
+    jest.clearAllMocks();
+  });
+
+
+test('Navbar home link redirects to homepage', () => {
+    const {getByText} = render(<Navbar></Navbar>)
+
+    fireEvent.click(getByText(/home/i))
+    expect(mockedUsedNavigate).toHaveBeenCalledWith("/")
+})
+
