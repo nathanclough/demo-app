@@ -6,8 +6,8 @@ import Navbar from './components/Navbar/Navbar';
 function App() {
   return (
     <div>
-      <Navbar></Navbar>
       <header className="App-header">
+        Home Page
         <ProfileHeader name="nathan"></ProfileHeader>
         <CheckboxWithLabel/>
       </header>
