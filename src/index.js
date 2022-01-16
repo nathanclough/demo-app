@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import {BrowserRouter, Route, Routes} from "react-router-dom"
+import {HashRouter, Route, Routes} from "react-router-dom"
 import Home from './Pages/Home';
 import Profile from './Pages/Profile';
 import reportWebVitals from './reportWebVitals';
@@ -9,14 +9,14 @@ import Navbar from './components/Navbar/Navbar';
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <HashRouter>
     <Navbar></Navbar>
       <Routes>
         <Route path="/" element={<Home />}/>
         <Route path="profile" element={<Profile></Profile>}/>
         <Route path="*" element={<div>Invalid URL</div>}/>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
