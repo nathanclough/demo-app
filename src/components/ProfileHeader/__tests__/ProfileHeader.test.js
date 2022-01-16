@@ -5,7 +5,7 @@ import ProfileHeader from '../ProfileHeader'
 // This 
 afterEach(cleanup);
 
-it('ProfileHeader displays name', () => {
+test('ProfileHeader displays name', () => {
     
     // Render function returns useful functions to manipulate the component
     const {queryAllByLabelText,getByLabelText} = render(
