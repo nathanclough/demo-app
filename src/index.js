@@ -2,10 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import {HashRouter, Route, Routes} from "react-router-dom"
+import Navbar from './components/Navbar/Navbar';
 import Home from './Pages/Home';
 import Profile from './Pages/Profile';
 import reportWebVitals from './reportWebVitals';
-import Navbar from './components/Navbar/Navbar';
 
 ReactDOM.render(
   <React.StrictMode>
