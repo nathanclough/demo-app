@@ -8,7 +8,7 @@ function Home() {
       <header className="App-header">
         Home Page
         <ProfileHeader name="nathan"></ProfileHeader>
-        <CheckboxWithLabel/>
+        <ProfileHeader name="Rex"></ProfileHeader>
       </header>
     </div>
   );

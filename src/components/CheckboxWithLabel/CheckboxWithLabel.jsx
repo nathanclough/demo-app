@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 
-const CheckboxWithLabel = ({labelOn, labelOff}) => {
+function CheckboxWithLabel({labelOn, labelOff}) {
   const [isChecked, setIsChecked] = useState(false);
 
   const onChange = () => {

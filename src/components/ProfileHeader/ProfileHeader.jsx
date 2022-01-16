@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ProfileHeader = ({name}) =>{
+function ProfileHeader({name}){
     return (
             <label>{name}</label>
     )
